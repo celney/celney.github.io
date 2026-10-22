@@ -3470,24 +3470,50 @@ h1, h2,h3, h4, h5, h6 {
 
 
 /* Photo de fond de la page d'accueil */
+
+
 #one.accueil {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-    ),url("../../images/bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
-/* Texte blanc du titre */
-#one.accueil,
-#one.accueil h2,
-#one.accueil p {
+#one .fond-accueil {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#one .contenu-accueil {
+    position: relative;
+    z-index: 1;
     color: white;
-} 
+}
+
+#one .contenu-accueil h2,
+#one .contenu-accueil p {
+    color: white;
+}
+
+#one.accueil::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#one .fond-accueil {
+    z-index: 0;
+}
+
+#one .contenu-accueil {
+    position: relative;
+    z-index: 1;
+}
