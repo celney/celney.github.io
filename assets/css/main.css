@@ -3492,19 +3492,28 @@ h1, h2,h3, h4, h5, h6 {
 #one .contenu-accueil {
     position: relative;
     z-index: 1;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
-
-#one .contenu-accueil h2,
-#one .contenu-accueil p {
-    color: white;
+#one .contenu-accueil p
+{
+    color: rgb(0, 0, 0);
 }
-
+#one .contenu-accueil p1 
+{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+#one .contenu-accueil h2
+{
+    color: rgb(32, 65, 32);
+    
+}
 #one.accueil::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.45);
     z-index: 0;
     pointer-events: none;
 }
