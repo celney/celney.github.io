@@ -3457,3 +3457,13 @@ input[type="button"]:disabled,
 h1, h2,h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
+
+/* effet passage de souris sur vidéo*/
+
+#four a img {
+  transition: filter 0.3s ease;
+}
+
+#four a:hover img {
+  filter: brightness(1.3);
+}
